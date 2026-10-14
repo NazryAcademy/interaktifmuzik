@@ -66,11 +66,18 @@ Fail `ujian/test-results.json` dan `ujian/server-test-results.json` menyimpan ha
 
 ## Belum disahkan
 
-- Chromium/WebKit tidak tersedia di persekitaran ini; muat turun pelayar gagal.
-  Ujian DOM bukan bukti rupa paparan, audio yang didengar atau keserasian Safari iPhone.
-- Endpoint Apps Script belum diterbitkan. CORS/redirect Google dan penerimaan data dari
+- Ujian Chrome melalui pelayar awan telah dilaksanakan selepas penerbitan: dua kuiz
+  penuh (Tahun 1 dan Tahun 6) menghasilkan 20/20, satu padanan menghasilkan 6/6, dan
+  butang audio/ketukan memaparkan maklum balas. Ukuran halaman utama serta kuiz pada
+  bingkai 320, 390 dan 430 px tidak menunjukkan limpahan mendatar. Ini bukan ujian
+  perkakasan iPhone atau Safari. Bunyi didengar pada telefon sebenar belum disahkan.
+- Projek Apps Script dan penerbitan dengan pilihan Anyone telah disediakan. Pemilik telah
+  bersetuju dengan akses Anyone; Google meminta kebenaran projek baharu yang belum
+  disahkan. Penerima belum aktif dan endpoint belum dimasukkan dalam aplikasi. CORS/redirect Google dan penerimaan data dari
   telefon sebenar belum diuji. Jangan anggap rekod telah tiba hanya kerana permintaan dihantar.
-- GitHub Pages belum diterbitkan; repositori khusus belum diwujudkan.
+- GitHub Pages aktif di https://nazryacademy.github.io/interaktifmuzik/ dan sumber berada
+  dalam repositori NazryAcademy/interaktifmuzik. Aplikasi masih menggunakan rekod peranti
+  sementara kebenaran Apps Script belum selesai.
 - DNS Exabytes belum dibaca atau diubah. Rekod DNS di panduan ialah cadangan, bukan konfigurasi aktif.
 - Gambar instrumen sebenar belum disediakan. Carian foto rawak ZIP asal dibuang daripada
   soalan kerana imej yang salah atau gagal dimuat boleh menyebabkan soalan tidak dapat dijawab.
