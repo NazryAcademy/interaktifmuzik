@@ -1,6 +1,7 @@
 PANDUAN PENERBITAN — MODUL MUZIK v1.1
 
-STATUS: GOOGLE SHEETS DISEDIAKAN; APPS SCRIPT DAN GITHUB PAGES BELUM DITERBITKAN.
+STATUS: GITHUB PAGES AKTIF; GOOGLE SHEETS DISEDIAKAN; KEBENARAN GOOGLE UNTUK APPS SCRIPT MASIH BELUM SELESAI.
+Laman: https://nazryacademy.github.io/interaktifmuzik/
 DNS EXABYTES BELUM DIUBAH. PENGESAHAN CIKGU DIPERLUKAN SEBELUM PERUBAHAN DNS.
 
 A. GOOGLE SHEETS GURU
@@ -17,7 +18,10 @@ Tab: Ringkasan Guru, Keputusan Muzik, Jawapan Terperinci.
 8. Jangan terbitkan Sheet sebagai laman awam. Tambah guru sebagai pembaca/editor jika diperlukan.
 
 B. GITHUB PAGES
-Repositori cadangan: NazryAcademy/interaktifmuzik (belum diwujudkan).
+Repositori aktif: NazryAcademy/interaktifmuzik.
+Tetapan Pages semasa: Deploy from a branch > main > / (root).
+Ujian paparan Chrome pada bingkai telefon 320, 390 dan 430 px telah dilaksanakan.
+Langkah penerbitan di bawah ialah rujukan; repositori dan penerbitan asas telah siap.
 1. Cipta repositori awam bernama interaktifmuzik pada akaun NazryAcademy.
 2. Muat naik isi folder ini ke akar repositori; pastikan index.html tidak berada dalam folder bersarang.
 3. Settings > Pages > Source: GitHub Actions. Aliran .github/workflows/pages.yml disediakan.
