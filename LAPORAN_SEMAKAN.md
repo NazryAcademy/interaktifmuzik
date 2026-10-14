@@ -1,6 +1,6 @@
 # Laporan pembangunan dan pengesahan
 
-Tarikh: 14 Oktober 2026. Versi: 1.1.
+Tarikh: 14 Oktober 2026. Versi: 1.2.
 
 ## Semakan kurikulum
 
@@ -80,10 +80,15 @@ Fail `ujian/test-results.json` dan `ujian/server-test-results.json` menyimpan ha
   menyimpan CNAME interaktifmuzik → nazryacademy.github.io, TTL 300 di Exabytes.
   Rekod domain utama, e-mel dan aplikasi lain dikekalkan. GitHub menunjukkan DNS check
   successful; Enforce HTTPS diaktifkan dan domain dibuka melalui HTTPS.
-- Gambar instrumen sebenar belum disediakan. Carian foto rawak ZIP asal dibuang daripada
-  soalan kerana imej yang salah atau gagal dimuat boleh menyebabkan soalan tidak dapat dijawab.
+- Koleksi 22 foto sebenar dipilih dan disemak secara visual. Fail disimpan bersama aplikasi;
+  sumber, pencipta, lesen CC/CC0/domain awam dan perubahan saiz dinyatakan. Caklempong
+  serta timpani turut disediakan. Gambar simbol/notasi kekal SVG bagi ketepatan notasi.
 - Ujian pilihan tepat tidak menggantikan semakan pedagogi semua pengganggu oleh panitia.
 
 Pengesahan pada perkakasan sebenar masih perlu: Safari iPhone dan Chrome Android,
 terutamanya bunyi, bacaan suara dan cetakan. Pengesahan penghantaran Chrome awan tidak
 membuktikan semua gabungan peranti telah diuji.
+
+## Borang dan sekolah - 15 Oktober 2026
+
+Nama Kelas tanpa pilihan contoh, Nama Sekolah, kredit pencipta dan e-book 15 halaman ditambah. Ujian DOM masih meliputi 420 soalan dan 21 padanan/detik. Ujian sekolah meliputi profil permulaan, resume, rekod lama tanpa sekolah, had 160 aksara dan respons penerima lama. Penerbitan Apps Script 1.2 menunggu log masuk semula; penerima 1.1 terus menerima keputusan kuiz.

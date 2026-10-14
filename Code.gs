@@ -4,14 +4,15 @@
  */
 const SPREADSHEET_ID='14t68tdIRux2BW0Ie6QpVluBIk2cmaJDQBMlPc4d2QYk';
 const SHEET_NAME='Keputusan Muzik',DETAIL_NAME='Jawapan Terperinci';
-const COLS=['ID Rekod','Masa Diterima','Masa Jawapan','Nama Murid','Kelas','Tahun','Tajuk','Markah','Jumlah Soalan','Peratus','Tempoh (saat)','Percubaan','Modul Versi'];
+const COLS=['ID Rekod','Masa Diterima','Masa Jawapan','Nama Murid','Kelas','Tahun','Tajuk','Markah','Jumlah Soalan','Peratus','Tempoh (saat)','Percubaan','Modul Versi','Nama Sekolah'];
 const DETAIL_COLS=['ID Rekod','ID Soalan','Jawapan Murid','Jawapan Betul','Betul','Nama Murid'];
-function doGet(){return output_({ok:true,service:'Interaktif Muzik',version:'1.1'});}
+function doGet(){return output_({ok:true,service:'Interaktif Muzik',version:'1.2'});}
 function doPost(e){
  let lock;
  try{
   const raw=String((e.parameter||{}).payload||'');if(raw.length>30000)return output_({ok:false,error:'size'});
   const p=JSON.parse(raw),id=String(p.id||''),name=String(p.name||'').trim().toUpperCase(),cls=String(p.className||'').trim().toUpperCase();
+  const school=String(p.schoolName||'').trim().toUpperCase();if(school.length>160)return output_({ok:false,error:'school'});
   const year=Number(p.year),duration=Number(p.duration),attempt=Number(p.attempt),date=new Date(p.date);
   const bank=SERVER_BANKS.find(b=>b.year===year&&b.title===p.topic);
   if(!/^[A-Za-z0-9_-]{8,80}$/.test(id)||!name||name.length>120||!cls||cls.length>60||!bank||p.total!==20||!Number.isFinite(duration)||duration<0||duration>604800||!Number.isInteger(attempt)||attempt<1||attempt>10000||!Number.isFinite(date.getTime())||!Array.isArray(p.answers)||p.answers.length!==20)return output_({ok:false,error:'invalid'});
@@ -27,11 +28,11 @@ function doPost(e){
   if(!tab.getLastRow()){tab.appendRow(COLS);tab.setFrozenRows(1);}
   if(!detail.getLastRow()){detail.appendRow(DETAIL_COLS);detail.setFrozenRows(1);}
   const existing=tab.getLastRow()>1?tab.getRange(2,1,tab.getLastRow()-1,1).createTextFinder(id).matchEntireCell(true).findNext():null;
-  if(existing){const received=tab.getRange(existing.getRow(),2).getValue();return output_({ok:true,id,duplicate:true,receivedAt:new Date(received).toISOString()});}
+  if(existing){if(school&&!tab.getRange(existing.getRow(),14).getValue())tab.getRange(existing.getRow(),14).setValue(safe_(school));const confirmedSchool=String(tab.getRange(existing.getRow(),14).getValue()||'');const received=tab.getRange(existing.getRow(),2).getValue();return output_({ok:true,id,duplicate:true,schoolName:confirmedSchool,receivedAt:new Date(received).toISOString()});}
   if(detail.getLastRow()>1){const partial=detail.getRange(2,1,detail.getLastRow()-1,1).createTextFinder(id).matchEntireCell(true).findAll();partial.sort((a,b)=>b.getRow()-a.getRow()).forEach(c=>detail.deleteRow(c.getRow()));}
   const received=new Date();if(detail.getLastRow()+20>detail.getMaxRows())detail.insertRowsAfter(detail.getMaxRows(),Math.max(1000,detail.getLastRow()+20-detail.getMaxRows()));detail.getRange(detail.getLastRow()+1,1,20,6).setValues(details);
-  tab.appendRow([id,received,date,safe_(name),safe_(cls),year,safe_(p.topic),score,20,score*5,Math.round(duration),attempt,'1.1']);
-  SpreadsheetApp.flush();return output_({ok:true,id,receivedAt:received.toISOString(),score,total:20});
+  tab.appendRow([id,received,date,safe_(name),safe_(cls),year,safe_(p.topic),score,20,score*5,Math.round(duration),attempt,'1.2',safe_(school)]);
+  SpreadsheetApp.flush();return output_({ok:true,id,receivedAt:received.toISOString(),score,total:20,schoolName:school});
  }catch(err){return output_({ok:false,error:'server'});}finally{if(lock)lock.releaseLock();}
 }
 function safe_(s){s=String(s);return /^[\s]*[=+\-@]/.test(s)?"'"+s:s;}

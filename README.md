@@ -1,6 +1,6 @@
 # Modul Interaktif Pendidikan Muzik Tahun 1–6
 
-Versi 1.1. 21 tajuk, 20 soalan setiap tajuk, 420 soalan keseluruhan.
+Versi 1.2. 21 tajuk, 20 soalan setiap tajuk, 420 soalan keseluruhan.
 Tahun 1–3: 60 soalan setiap tahun. Tahun 4–6: 80 soalan setiap tahun.
 
 ## Fail aplikasi
@@ -23,7 +23,7 @@ Butang suara menggunakan keupayaan pelayar; suara Melayu bergantung pada peranti
 Kemajuan dan keputusan disimpan pada pelayar yang sama. Butang sambung memulihkan
 kuiz selepas muat semula. Jangan kosongkan data pelayar sebelum rekod disahkan diterima.
 Padanan menggunakan istilah dan penerangan. Permainan detik menggunakan audio sintetik.
-Versi ini tidak mempunyai koleksi foto instrumen sebenar yang telah disahkan.
+Koleksi 22 foto sebenar disimpan bersama aplikasi; kredit dan lesen disediakan pada setiap foto serta KREDIT_FOTO.md. E-book PDF tersedia melalui butang di bahagian atas aplikasi.
 
 ## Guru
 
@@ -54,3 +54,9 @@ menunjukkan tiada limpahan mendatar pada halaman utama dan kuiz. Safari iPhone s
 masih belum diuji.
 
 Ujian fungsi: `npm install` kemudian `npm test`. Simulasi DOM bukan ujian pelayar telefon.
+
+## Kemas kini 15 Oktober 2026
+
+Create by Cikgu Mohd Nazri Mustafa. Nama Kelas ialah isian bebas tanpa contoh atau pilihan guru. Nama Sekolah diperlukan dan disimpan dalam profil, draf, keputusan serta CSV tempatan.
+
+Code.gs versi 1.2 menyokong lajur Nama Sekolah dan pengesahan penerimaan sekolah. Kod baharu disediakan, tetapi redeploy penerima masih memerlukan log masuk semula pemilik. Penerima versi 1.1 sedia ada terus menerima kuiz; aplikasi membezakan keputusan diterima dengan nama sekolah yang belum disahkan, dan mencuba semula metadata sekolah kemudian.
