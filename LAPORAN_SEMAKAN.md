@@ -64,7 +64,7 @@ Ujian dilaksanakan menggunakan jsdom (simulasi DOM) dan Node VM (simulasi perkhi
 
 Fail `ujian/test-results.json` dan `ujian/server-test-results.json` menyimpan hasil.
 
-## Belum disahkan
+## Pengesahan pelayar dan batas
 
 - Ujian Chrome melalui pelayar awan telah dilaksanakan selepas penerbitan: dua kuiz
   penuh (Tahun 1 dan Tahun 6) menghasilkan 20/20, satu padanan menghasilkan 6/6, dan
