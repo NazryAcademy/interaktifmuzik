@@ -1,4 +1,4 @@
-PANDUAN PENGGUNAAN DAN PENERBITAN — MODUL MUZIK v1.1
+PANDUAN PENGGUNAAN DAN PENERBITAN — MODUL MUZIK v1.2
 
 STATUS: DOMAIN HTTPS DAN PENERIMA GOOGLE SHEETS AKTIF, DIUJI 14 OKTOBER 2026.
 Laman: https://interaktifmuzik.sistemmurid.com/
@@ -49,4 +49,12 @@ Baca LAPORAN_SEMAKAN.md dan Pemetaan_420_Soalan.csv.
 detik dan paparan 320/390/430 px diuji dalam Chrome awan.
 Kuiz Chrome pada domain HTTPS menerima resit Sheets; satu keputusan dan 20 jawapan
 disahkan melalui bacaan semula. Ini bukan ujian semua 420 klik pada telefon sebenar.
-Gambar instrumen sebenar yang dikurasi belum disediakan.
+Koleksi 22 foto sebenar dengan kredit dan lesen disediakan dalam aplikasi.
+E-book: Panduan_Modul_Interaktif_Muzik.pdf (15 halaman).
+Nama Kelas ialah isian bebas tanpa contoh; Nama Sekolah ditambah pada profil dan rekod tempatan.
+Lajur Nama Sekolah telah disediakan dalam Sheets. Penerima Code.gs versi 1.2 disediakan
+tetapi redeploy menunggu log masuk semula pemilik. Penerima lama terus menerima keputusan
+kuiz. Aplikasi membezakan pengesahan kuiz dengan metadata sekolah yang belum disahkan.
+Selepas redeploy, butang cubaan semula melengkapkan sekolah pada ID rekod yang sama.
+
+Create by Cikgu Mohd Nazri Mustafa
