@@ -71,18 +71,19 @@ Fail `ujian/test-results.json` dan `ujian/server-test-results.json` menyimpan ha
   butang audio/ketukan memaparkan maklum balas. Ukuran halaman utama serta kuiz pada
   bingkai 320, 390 dan 430 px tidak menunjukkan limpahan mendatar. Ini bukan ujian
   perkakasan iPhone atau Safari. Bunyi didengar pada telefon sebenar belum disahkan.
-- Projek Apps Script dan penerbitan dengan pilihan Anyone telah disediakan. Pemilik telah
-  bersetuju dengan akses Anyone; Google meminta kebenaran projek baharu yang belum
-  disahkan. Penerima belum aktif dan endpoint belum dimasukkan dalam aplikasi. CORS/redirect Google dan penerimaan data dari
-  telefon sebenar belum diuji. Jangan anggap rekod telah tiba hanya kerana permintaan dihantar.
-- GitHub Pages aktif di https://nazryacademy.github.io/interaktifmuzik/ dan sumber berada
-  dalam repositori NazryAcademy/interaktifmuzik. Aplikasi masih menggunakan rekod peranti
-  sementara kebenaran Apps Script belum selesai.
-- DNS Exabytes belum dibaca atau diubah. Rekod DNS di panduan ialah cadangan, bukan konfigurasi aktif.
+- Google Apps Script aktif selepas kebenaran pemilik pada 14 Oktober 2026. Endpoint
+  /exec dalam config.js telah disambungkan. GET kesihatan memberi ok:true, version:1.1.
+  POST ujian dengan score palsu 999 dikira semula sebagai 20/20 dan diterima.
+  Kuiz Chrome pada domain HTTPS juga menerima resit; bacaan semula Sheets mengesahkan
+  satu baris keputusan serta 20 jawapan. Dua rekod ujian dibersihkan selepas pengesahan.
+- Domain https://interaktifmuzik.sistemmurid.com/ aktif. Pemilik meluluskan DNS sebelum
+  menyimpan CNAME interaktifmuzik → nazryacademy.github.io, TTL 300 di Exabytes.
+  Rekod domain utama, e-mel dan aplikasi lain dikekalkan. GitHub menunjukkan DNS check
+  successful; Enforce HTTPS diaktifkan dan domain dibuka melalui HTTPS.
 - Gambar instrumen sebenar belum disediakan. Carian foto rawak ZIP asal dibuang daripada
   soalan kerana imej yang salah atau gagal dimuat boleh menyebabkan soalan tidak dapat dijawab.
 - Ujian pilihan tepat tidak menggantikan semakan pedagogi semua pengganggu oleh panitia.
 
-Pengesahan akhir: buka aplikasi di Safari iPhone dan Chrome Android, uji kuiz serta
-permainan pada skrin 320–430 px, terbitkan Apps Script, jawab kuiz percubaan dan semak
-1 baris keputusan serta 20 baris jawapan. Kemudian uji URL GitHub sebelum domain tersuai.
+Pengesahan pada perkakasan sebenar masih perlu: Safari iPhone dan Chrome Android,
+terutamanya bunyi, bacaan suara dan cetakan. Pengesahan penghantaran Chrome awan tidak
+membuktikan semua gabungan peranti telah diuji.
