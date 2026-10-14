@@ -38,7 +38,16 @@ dan dinilai oleh guru. Nama yang ditaip sendiri tidak membuktikan identiti murid
 
 ## Status
 
-Google Sheets telah diwujudkan. Endpoint Apps Script masih kosong dalam `config.js`.
-GitHub Pages belum diterbitkan. DNS Exabytes belum diubah.
+Aplikasi aktif: https://nazryacademy.github.io/interaktifmuzik/
+
+Google Sheets telah diwujudkan. Projek Apps Script terikat pada Sheet telah disediakan,
+dan akses Anyone dipersetujui oleh pemilik. Penerbitan penerima menunggu kebenaran
+Google untuk projek baharu. Endpoint dalam `config.js` masih kosong sehingga kebenaran
+itu selesai dan penghantaran sebenar disahkan. DNS Exabytes belum diubah.
+
+Ujian pelayar Chrome sebenar: kuiz Tahun 1 dan Tahun 6 menghasilkan 20/20, padanan 6/6,
+dan permainan detik memaparkan maklum balas. Paparan pada bingkai 320, 390 dan 430 px
+menunjukkan tiada limpahan mendatar pada halaman utama dan kuiz. Safari iPhone sebenar
+masih belum diuji.
 
 Ujian fungsi: `npm install` kemudian `npm test`. Simulasi DOM bukan ujian pelayar telefon.
