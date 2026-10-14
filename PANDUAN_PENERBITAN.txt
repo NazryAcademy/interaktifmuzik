@@ -1,55 +1,52 @@
-PANDUAN PENERBITAN — MODUL MUZIK v1.1
+PANDUAN PENGGUNAAN DAN PENERBITAN — MODUL MUZIK v1.1
 
-STATUS: GITHUB PAGES AKTIF; GOOGLE SHEETS DISEDIAKAN; KEBENARAN GOOGLE UNTUK APPS SCRIPT MASIH BELUM SELESAI.
-Laman: https://nazryacademy.github.io/interaktifmuzik/
-DNS EXABYTES BELUM DIUBAH. PENGESAHAN CIKGU DIPERLUKAN SEBELUM PERUBAHAN DNS.
+STATUS: DOMAIN HTTPS DAN PENERIMA GOOGLE SHEETS AKTIF, DIUJI 14 OKTOBER 2026.
+Laman: https://interaktifmuzik.sistemmurid.com/
+Repositori: https://github.com/NazryAcademy/interaktifmuzik
 
-A. GOOGLE SHEETS GURU
+A. MURID
+1. Isi nama (huruf besar) dan kelas.
+2. Pilih Tahun 1–6 dan baca nota tajuk.
+3. Jawab semua 20 soalan. Gunakan semakan jawapan dan permainan.
+4. Selepas tamat, tunggu status disahkan diterima Google Sheets.
+5. Jika rekod tertangguh, pastikan Internet tersedia dan tekan cuba hantar semula.
+6. Jangan kosongkan data pelayar sebelum penghantaran disahkan.
+Bacaan suara Melayu bergantung pada sokongan peranti. Ujian perkakasan iPhone/Safari
+dan Chrome Android sebenar masih diperlukan, terutama audio dan cetakan.
+
+B. GOOGLE SHEETS GURU
 https://docs.google.com/spreadsheets/d/14t68tdIRux2BW0Ie6QpVluBIk2cmaJDQBMlPc4d2QYk/edit
 Tab: Ringkasan Guru, Keputusan Muzik, Jawapan Terperinci.
-1. Buka Sheet menggunakan akaun Google guru.
-2. Extensions > Apps Script. Tampal keseluruhan Code.gs termasuk SERVER_BANKS.
-3. Deploy > New deployment > Web app. Execute as: Me. Access: Anyone.
-4. Selesaikan kebenaran Google melalui akaun sendiri. Jangan berikan kata laluan kepada pembantu.
-5. Salin URL berakhir /exec ke endpoint dalam config.js.
-6. Uji daripada laman HTTPS. Selesaikan satu kuiz; semak 1 rekod keputusan dan 20 jawapan.
-7. Aplikasi hanya menandakan diterima apabila balasan JSON mengesahkan ID rekod.
-   Jika CORS/redirect menghalang balasan, status kekal tertangguh. Semak penerima sebelum penggunaan.
-8. Jangan terbitkan Sheet sebagai laman awam. Tambah guru sebagai pembaca/editor jika diperlukan.
+Buka menggunakan akaun Google guru yang dibenarkan. Sheet kekal persendirian.
+Setiap kuiz dihantar sebagai satu rekod keputusan dan 20 jawapan terperinci.
+Markah dikira semula oleh Apps Script; ID rekod mencegah duplikasi cubaan semula.
+Nama yang ditaip sendiri bukan pengesahan identiti murid. Markah kuiz bukan TP automatik.
+Dua rekod QA berjaya diterima dan dibersihkan sebelum penggunaan murid.
 
-B. GITHUB PAGES
-Repositori aktif: NazryAcademy/interaktifmuzik.
-Tetapan Pages semasa: Deploy from a branch > main > / (root).
-Ujian paparan Chrome pada bingkai telefon 320, 390 dan 430 px telah dilaksanakan.
-Langkah penerbitan di bawah ialah rujukan; repositori dan penerbitan asas telah siap.
-1. Cipta repositori awam bernama interaktifmuzik pada akaun NazryAcademy.
-2. Muat naik isi folder ini ke akar repositori; pastikan index.html tidak berada dalam folder bersarang.
-3. Settings > Pages > Source: GitHub Actions. Aliran .github/workflows/pages.yml disediakan.
-4. Jalankan aliran dan tunggu penerbitan berjaya. Buka URL sebenar yang dilaporkan GitHub.
-5. Jangan anggap URL aktif sebelum status deployment berjaya dan laman dibuka.
-6. Uji Safari iPhone dan Chrome Android: nota, 20 jawapan, semakan, ulang, sambung,
-   padanan, audio, cetakan dan penghantaran keputusan.
+C. PENYELENGGARAAN APPS SCRIPT
+Projek: Penerima Keputusan Interaktif Muzik.
+Web app: Execute as Me, Access Anyone, dipersetujui pemilik.
+URL /exec disimpan dalam config.js. Code.gs termasuk SERVER_BANKS mesti dikekalkan.
+Selepas perubahan Code.gs: Deploy > Manage deployments > Edit > New version > Deploy.
+Jangan cipta URL penerima baharu tanpa mengemas kini config.js.
+Kebenaran Google projek ini merangkumi akses semua Sheets dalam akaun pemilik;
+kod penerima menggunakan spreadsheet ID khusus yang dinyatakan di atas.
+Tiada API membaca rekod murid secara awam.
 
-C. CADANGAN DNS — BELUM DILULUSKAN
-Domain: interaktifmuziksistemmurid.com
-Semak dahulu pemilikan domain, nameserver serta semua rekod DNS sedia ada dalam Exabytes.
-Jangan ubah rekod emel MX/TXT atau nameserver tanpa keperluan.
-Sebelum membuat perubahan DNS, tunjukkan rekod lama dan baharu kepada cikgu dan minta pengesahan.
-Cadangan berdasarkan dokumentasi rasmi GitHub Pages pada 14 Oktober 2026:
-A @ 185.199.108.153
-A @ 185.199.109.153
-A @ 185.199.110.153
-A @ 185.199.111.153
-CNAME www NazryAcademy.github.io
-TTL: gunakan nilai sedia ada atau 3600 saat jika disokong.
-Apex A mesti merujuk kepada empat IP ini. www tidak memasukkan nama repositori.
-1. Sediakan custom domain di GitHub Pages setelah domain dipastikan milik cikgu.
-2. domain/CNAME.pending ialah templat; fail itu tidak sedang menetapkan domain aplikasi.
-3. Selepas pengesahan cikgu barulah gunakan cadangan DNS yang telah disesuaikan dengan rekod semasa.
-4. Semak DNS dan sijil, kemudian Enforce HTTPS apabila tersedia.
-5. DNS boleh mengambil masa sehingga 24 jam untuk tersebar.
-Rujukan: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+D. GITHUB PAGES DAN DNS SEMASA
+Pages: Deploy from a branch > main > / (root).
+Custom domain: interaktifmuzik.sistemmurid.com. Enforce HTTPS aktif.
+Exabytes: CNAME | Name interaktifmuzik | Target nazryacademy.github.io | TTL 300.
+Pemilik meluluskan rekod sebelum menyimpan. Rekod domain utama dan emel tidak diubah.
+Jangan tambah A apex atau tukar nameserver untuk subdomain ini.
+URL lama GitHub mungkin dialihkan ke domain tersuai.
+Jika membuat perubahan DNS seterusnya, tunjukkan nilai lama/baharu dan minta pengesahan.
 
-D. PENGESAHAN KURIKULUM
+E. KURIKULUM DAN BATAS UJIAN
+21 tajuk × 20 soalan = 420. Tahun 1–3: 60 setiap tahun; Tahun 4–6: 80 setiap tahun.
 Baca LAPORAN_SEMAKAN.md dan Pemetaan_420_Soalan.csv.
-CSV memetakan SP pada peringkat tajuk; aktiviti objektif tidak menggantikan pentaksiran amali.
+420 jawapan dan semua permainan diuji dalam simulasi DOM; kuiz terpilih, padanan,
+detik dan paparan 320/390/430 px diuji dalam Chrome awan.
+Kuiz Chrome pada domain HTTPS menerima resit Sheets; satu keputusan dan 20 jawapan
+disahkan melalui bacaan semula. Ini bukan ujian semua 420 klik pada telefon sebenar.
+Gambar instrumen sebenar yang dikurasi belum disediakan.
