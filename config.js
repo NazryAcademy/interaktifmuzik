@@ -1,1 +1,1 @@
-window.MUZIK_CONFIG = {endpoint: "", teacherSheetUrl: "https://docs.google.com/spreadsheets/d/14t68tdIRux2BW0Ie6QpVluBIk2cmaJDQBMlPc4d2QYk/edit"};
+window.MUZIK_CONFIG = {endpoint: "https://script.google.com/macros/s/AKfycbzxwrYLZJlEt85CyN2ywkF0K7GEN_bTgQlQfNQvyw3i-Sr78O9pUYrTqSI5I7knI0_FFA/exec", teacherSheetUrl: "https://docs.google.com/spreadsheets/d/14t68tdIRux2BW0Ie6QpVluBIk2cmaJDQBMlPc4d2QYk/edit"};
