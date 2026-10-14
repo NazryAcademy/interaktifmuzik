@@ -1,4 +1,4 @@
-/** Muzik v1.1. Web app: Execute as Me, access Anyone.
+/** Muzik v1.2. Web app: Execute as Me, access Anyone.
  * Guru membaca Sheet persendirian melalui akaun Google. Tiada API bacaan murid.
  * Endpoint latihan ini tidak membuktikan identiti murid.
  */
