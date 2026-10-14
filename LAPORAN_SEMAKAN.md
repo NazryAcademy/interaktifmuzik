@@ -92,3 +92,9 @@ membuktikan semua gabungan peranti telah diuji.
 ## Borang dan sekolah - 15 Oktober 2026
 
 Nama Kelas tanpa pilihan contoh, Nama Sekolah, kredit pencipta dan e-book 15 halaman ditambah. Ujian DOM masih meliputi 420 soalan dan 21 padanan/detik. Ujian sekolah meliputi profil permulaan, resume, rekod lama tanpa sekolah, had 160 aksara dan respons penerima lama. Penerbitan Apps Script 1.2 menunggu log masuk semula; penerima 1.1 terus menerima keputusan kuiz.
+
+Pengesahan terbitan v1.2: 22/22 fail JPEG memberikan HTTP 200 dan hash sepadan dengan
+salinan tempatan. PDF terbitan memberikan HTTP 200, application/pdf dan hash sepadan.
+Borang serta galeri pada bingkai 320, 390 dan 430 px mempunyai scrollWidth sama dengan
+clientWidth. Dialog foto turut diuji dalam Chrome. E-book 15 halaman dirender dan disemak
+secara visual; kredit pencipta wujud pada semua halaman dan 47 pautan disediakan.
