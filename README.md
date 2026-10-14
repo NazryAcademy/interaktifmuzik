@@ -11,7 +11,6 @@ Tahun 1–3: 60 soalan setiap tahun. Tahun 4–6: 80 soalan setiap tahun.
 - `Code.gs`: kod penerima keputusan, untuk editor Apps Script; bukan kod pelayar.
 - `Pemetaan_420_Soalan.csv`: ID soalan dan rujukan SP pada peringkat tajuk.
 - `LAPORAN_SEMAKAN.md`: hasil semakan, bukti ujian dan batas pengesahan.
-- `.github/workflows/pages.yml`: aliran penerbitan GitHub Pages.
 
 Buka melalui pelayan web atau GitHub Pages. Bagi semakan setempat:
 `python3 -m http.server 8000`, kemudian buka `http://localhost:8000`.
@@ -38,12 +37,16 @@ dan dinilai oleh guru. Nama yang ditaip sendiri tidak membuktikan identiti murid
 
 ## Status
 
-Aplikasi aktif: https://nazryacademy.github.io/interaktifmuzik/
+Aplikasi aktif: https://interaktifmuzik.sistemmurid.com/
 
-Google Sheets telah diwujudkan. Projek Apps Script terikat pada Sheet telah disediakan,
-dan akses Anyone dipersetujui oleh pemilik. Penerbitan penerima menunggu kebenaran
-Google untuk projek baharu. Endpoint dalam `config.js` masih kosong sehingga kebenaran
-itu selesai dan penghantaran sebenar disahkan. DNS Exabytes belum diubah.
+Google Apps Script aktif dan endpoint sudah dimasukkan dalam `config.js`.
+Ujian penghantaran melalui Chrome pada domain HTTPS berjaya: satu rekod keputusan
+20/20 dan 20 baris jawapan diterima, dengan resit disahkan oleh aplikasi. Dua rekod
+ujian dibersihkan selepas pengesahan. Sheet kekal persendirian untuk guru.
+
+DNS Exabytes diluluskan pemilik: CNAME interaktifmuzik → nazryacademy.github.io,
+TTL 300. GitHub mengesahkan DNS dan Enforce HTTPS telah diaktifkan.
+Penerbitan menggunakan main / (root).
 
 Ujian pelayar Chrome sebenar: kuiz Tahun 1 dan Tahun 6 menghasilkan 20/20, padanan 6/6,
 dan permainan detik memaparkan maklum balas. Paparan pada bingkai 320, 390 dan 430 px
