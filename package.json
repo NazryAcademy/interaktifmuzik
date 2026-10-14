@@ -1,0 +1,11 @@
+{
+  "name": "interaktifmuzik-sistemmurid",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node ujian/test-dom.cjs && node ujian/test-server.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.0.0"
+  }
+}

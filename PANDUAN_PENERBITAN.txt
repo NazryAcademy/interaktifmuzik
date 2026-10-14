@@ -1,0 +1,51 @@
+PANDUAN PENERBITAN — MODUL MUZIK v1.1
+
+STATUS: GOOGLE SHEETS DISEDIAKAN; APPS SCRIPT DAN GITHUB PAGES BELUM DITERBITKAN.
+DNS EXABYTES BELUM DIUBAH. PENGESAHAN CIKGU DIPERLUKAN SEBELUM PERUBAHAN DNS.
+
+A. GOOGLE SHEETS GURU
+https://docs.google.com/spreadsheets/d/14t68tdIRux2BW0Ie6QpVluBIk2cmaJDQBMlPc4d2QYk/edit
+Tab: Ringkasan Guru, Keputusan Muzik, Jawapan Terperinci.
+1. Buka Sheet menggunakan akaun Google guru.
+2. Extensions > Apps Script. Tampal keseluruhan Code.gs termasuk SERVER_BANKS.
+3. Deploy > New deployment > Web app. Execute as: Me. Access: Anyone.
+4. Selesaikan kebenaran Google melalui akaun sendiri. Jangan berikan kata laluan kepada pembantu.
+5. Salin URL berakhir /exec ke endpoint dalam config.js.
+6. Uji daripada laman HTTPS. Selesaikan satu kuiz; semak 1 rekod keputusan dan 20 jawapan.
+7. Aplikasi hanya menandakan diterima apabila balasan JSON mengesahkan ID rekod.
+   Jika CORS/redirect menghalang balasan, status kekal tertangguh. Semak penerima sebelum penggunaan.
+8. Jangan terbitkan Sheet sebagai laman awam. Tambah guru sebagai pembaca/editor jika diperlukan.
+
+B. GITHUB PAGES
+Repositori cadangan: NazryAcademy/interaktifmuzik (belum diwujudkan).
+1. Cipta repositori awam bernama interaktifmuzik pada akaun NazryAcademy.
+2. Muat naik isi folder ini ke akar repositori; pastikan index.html tidak berada dalam folder bersarang.
+3. Settings > Pages > Source: GitHub Actions. Aliran .github/workflows/pages.yml disediakan.
+4. Jalankan aliran dan tunggu penerbitan berjaya. Buka URL sebenar yang dilaporkan GitHub.
+5. Jangan anggap URL aktif sebelum status deployment berjaya dan laman dibuka.
+6. Uji Safari iPhone dan Chrome Android: nota, 20 jawapan, semakan, ulang, sambung,
+   padanan, audio, cetakan dan penghantaran keputusan.
+
+C. CADANGAN DNS — BELUM DILULUSKAN
+Domain: interaktifmuziksistemmurid.com
+Semak dahulu pemilikan domain, nameserver serta semua rekod DNS sedia ada dalam Exabytes.
+Jangan ubah rekod emel MX/TXT atau nameserver tanpa keperluan.
+Sebelum membuat perubahan DNS, tunjukkan rekod lama dan baharu kepada cikgu dan minta pengesahan.
+Cadangan berdasarkan dokumentasi rasmi GitHub Pages pada 14 Oktober 2026:
+A @ 185.199.108.153
+A @ 185.199.109.153
+A @ 185.199.110.153
+A @ 185.199.111.153
+CNAME www NazryAcademy.github.io
+TTL: gunakan nilai sedia ada atau 3600 saat jika disokong.
+Apex A mesti merujuk kepada empat IP ini. www tidak memasukkan nama repositori.
+1. Sediakan custom domain di GitHub Pages setelah domain dipastikan milik cikgu.
+2. domain/CNAME.pending ialah templat; fail itu tidak sedang menetapkan domain aplikasi.
+3. Selepas pengesahan cikgu barulah gunakan cadangan DNS yang telah disesuaikan dengan rekod semasa.
+4. Semak DNS dan sijil, kemudian Enforce HTTPS apabila tersedia.
+5. DNS boleh mengambil masa sehingga 24 jam untuk tersebar.
+Rujukan: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+D. PENGESAHAN KURIKULUM
+Baca LAPORAN_SEMAKAN.md dan Pemetaan_420_Soalan.csv.
+CSV memetakan SP pada peringkat tajuk; aktiviti objektif tidak menggantikan pentaksiran amali.

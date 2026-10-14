@@ -1,0 +1,10 @@
+{
+  "banks": 21,
+  "answers": 420,
+  "idempotency": true,
+  "serverScoring": true,
+  "inputValidation": true,
+  "formulaGuard": true,
+  "engine": "Node VM with Google API mocks",
+  "liveDeployment": false
+}

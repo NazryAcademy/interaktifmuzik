@@ -1,0 +1,17 @@
+{
+  "questionCount": 420,
+  "pairCount": 21,
+  "rhythmCount": 21,
+  "quizzes": 21,
+  "wrongAnswersScore": 0,
+  "resumeAfterReload": true,
+  "profileSnapshot": true,
+  "audioStop": true,
+  "unevenRhythmRejected": true,
+  "confirmedReceiptMock": true,
+  "offlineQueueMock": true,
+  "csvFormulaGuard": true,
+  "engine": "jsdom DOM simulation",
+  "liveGoogleSheets": false,
+  "phoneBrowser": false
+}
